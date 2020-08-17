@@ -86,7 +86,7 @@ HISTORY.max = max_history, HISTORY.savename = "bm_history", HISTORY.checkLocalSt
         n = Object.keys(r);
     for (var t in n.sort(), n) {
         var o;
-        a = `<li class="bm_item"><a href="${(o=r[n[t]]).chapter_permalink}">${o.chapter_title}</a></li>` + a
+        a = 'li class="bm_item"><a href="${(o=r[n[t]]).chapter_permalink}">${o.chapter_title}</a></li>' + a
     }
     return a = "<ul id='bm-history'>" + a + "</ul>"
 }, HISTORY.run = function() {
@@ -126,6 +126,9 @@ function loadChList() {
         }
     })
 }
+//javascript di page default
+var ajaxurl = "https://komikcast.com/wp-admin/admin-ajax.php";
+var max_history = 10;
 
 //javascript di page bookmark
 function my_rating() {
